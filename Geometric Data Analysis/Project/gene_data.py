@@ -1,5 +1,10 @@
 import pandas as pd
 
+'''
+Before reading the dataset, download it from the following URL:
+https://archive.ics.uci.edu/dataset/401/gene+expression+cancer+rna+seq
+'''
+
 def read_csv():
     gene_folder_path = "Datasets/TCGA-PANCAN-HiSeq-801x20531/"
     data_df = pd.read_csv(gene_folder_path + "data.csv")

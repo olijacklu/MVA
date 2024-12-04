@@ -7,6 +7,11 @@ from sklearn.utils import shuffle
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.preprocessing import normalize
 
+'''
+Before reading the dataset, download it from the following URL:
+https://www.cs.cmu.edu/afs/cs/project/theo-11/www/naive-bayes/20_newsgroup/
+'''
+
 def clean_text(text):
     text = re.sub(r'[^A-Za-z\s]', ' ', text)
     text = re.sub(r'\s+', ' ', text).strip()
