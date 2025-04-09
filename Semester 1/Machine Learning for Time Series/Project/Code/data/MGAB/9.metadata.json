@@ -1,0 +1,33 @@
+[
+  {
+    "anomaly_length": {
+      "max": 20,
+      "median": 20,
+      "min": 20
+    },
+    "contamination": 0.002,
+    "dataset_id": [
+      "MGAB",
+      "9"
+    ],
+    "dimensions": 1,
+    "is_train": false,
+    "length": 100000,
+    "means": {
+      "value": 0.9605040990278215
+    },
+    "num_anomalies": 10,
+    "periods": {
+      "value": 1
+    },
+    "stationarities": {
+      "value": "difference_stationary"
+    },
+    "stddevs": {
+      "value": 0.319030596433862
+    },
+    "trends": {
+      "value": []
+    }
+  }
+]

@@ -1,0 +1,33 @@
+[
+  {
+    "anomaly_length": {
+      "max": 379,
+      "median": 33,
+      "min": 1
+    },
+    "contamination": 0.11134920634920635,
+    "dataset_id": [
+      "Dodgers",
+      "101-freeway-traffic"
+    ],
+    "dimensions": 1,
+    "is_train": false,
+    "length": 50400,
+    "means": {
+      "count": 19.65281746031746
+    },
+    "num_anomalies": 133,
+    "periods": {
+      "count": 499
+    },
+    "stationarities": {
+      "count": "difference_stationary"
+    },
+    "stddevs": {
+      "count": 13.724028393108222
+    },
+    "trends": {
+      "count": []
+    }
+  }
+]

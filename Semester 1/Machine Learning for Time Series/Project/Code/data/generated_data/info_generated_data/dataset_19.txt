@@ -1,0 +1,63 @@
+{
+    "name": "dataset_19",
+    "length": 10000,
+    "base-oscillations": [
+        {
+            "kind": "cylinder-bell-funnel"
+        }
+    ],
+    "anomalies": [
+        {
+            "position": "beginning",
+            "length": 80,
+            "kinds": [
+                {
+                    "kind": "amplitude",
+                    "amplitude_factor": 3.2983581080613735
+                }
+            ]
+        },
+        {
+            "position": "middle",
+            "length": 35,
+            "kinds": [
+                {
+                    "kind": "amplitude",
+                    "amplitude_factor": 1.9882516624085231
+                }
+            ]
+        },
+        {
+            "position": "end",
+            "length": 20,
+            "kinds": [
+                {
+                    "kind": "platform",
+                    "value": 0.9739363800424361
+                }
+            ]
+        },
+        {
+            "position": "beginning",
+            "length": 30,
+            "kinds": [
+                {
+                    "kind": "trend",
+                    "oscillation": {
+                        "kind": "cylinder-bell-funnel"
+                    }
+                }
+            ]
+        },
+        {
+            "position": "end",
+            "length": 45,
+            "kinds": [
+                {
+                    "kind": "pattern",
+                    "cbf_pattern_factor": 14.313474615602885
+                }
+            ]
+        }
+    ]
+}

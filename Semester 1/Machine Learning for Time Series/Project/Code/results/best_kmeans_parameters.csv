@@ -1,0 +1,4 @@
+Parameter,Value
+n_clusters,50
+anomaly_window_size,50
+random_state,42

@@ -1,0 +1,33 @@
+[
+  {
+    "anomaly_length": {
+      "max": 800,
+      "median": 800,
+      "min": 800
+    },
+    "contamination": 0.32432432432432434,
+    "dataset_id": [
+      "NormA",
+      "SinusRW_Length_148000_AnomalyL_800_AnomalyN_60_NoisePerc_0"
+    ],
+    "dimensions": 1,
+    "is_train": false,
+    "length": 148000,
+    "means": {
+      "value": -7.988804812870316e-17
+    },
+    "num_anomalies": 60,
+    "periods": {
+      "value": 34
+    },
+    "stationarities": {
+      "value": "stationary"
+    },
+    "stddevs": {
+      "value": 1.414400133495434
+    },
+    "trends": {
+      "value": []
+    }
+  }
+]

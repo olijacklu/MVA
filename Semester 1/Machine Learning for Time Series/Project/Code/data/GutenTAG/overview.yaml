@@ -1,0 +1,3570 @@
+generated-timeseries:
+- anomalies:
+  - &id001
+    kinds: &id013
+    - kind: platform
+      parameters:
+        value: 0.0
+    length: 100
+  base-oscillation:
+    amplitude: 1.0
+    frequency: 5.0
+    kind: sinus
+    variance: 0
+  channels: 1
+  generation-id: 0
+  length: 10000
+  name: sinus-noise-00%
+  semi-supervised: true
+  supervised: true
+- anomalies:
+  - *id001
+  base-oscillation:
+    amplitude: 1.0
+    frequency: 5.0
+    kind: sinus
+    variance: 0.01
+  channels: 1
+  generation-id: 1
+  length: 10000
+  name: sinus-noise-01%
+  semi-supervised: true
+  supervised: true
+- anomalies:
+  - *id001
+  base-oscillation:
+    amplitude: 1.0
+    frequency: 5.0
+    kind: sinus
+    variance: 0.1
+  channels: 1
+  generation-id: 2
+  length: 10000
+  name: sinus-noise-10%
+  semi-supervised: true
+  supervised: true
+- anomalies:
+  - *id001
+  base-oscillation:
+    amplitude: 1.0
+    frequency: 5.0
+    kind: sinus
+    variance: 0.3
+  channels: 1
+  generation-id: 3
+  length: 10000
+  name: sinus-noise-30%
+  semi-supervised: true
+  supervised: true
+- anomalies:
+  - *id001
+  base-oscillation:
+    amplitude: 1.0
+    frequency: 5.0
+    kind: sinus
+    variance: 0.5
+  channels: 1
+  generation-id: 4
+  length: 10000
+  name: sinus-noise-50%
+  semi-supervised: true
+  supervised: true
+- anomalies:
+  - &id002
+    kinds: &id009
+    - kind: pattern
+      parameters:
+        cbf_pattern_factor: 2
+        sinusoid_k: 10.0
+    length: 100
+  base-oscillation:
+    amplitude: 1.0
+    frequency: 1
+    kind: ecg
+    trend: &id003
+      kind: polynomial
+      polynomial:
+      - 8
+      - 4
+      - 2
+      - 8
+    variance: 0
+  channels: 1
+  generation-id: 5
+  length: 10000
+  name: ecg-noise-00%
+  semi-supervised: true
+  supervised: true
+- anomalies:
+  - *id002
+  base-oscillation:
+    amplitude: 1.0
+    frequency: 1
+    kind: ecg
+    trend: *id003
+    variance: 0.01
+  channels: 1
+  generation-id: 6
+  length: 10000
+  name: ecg-noise-01%
+  semi-supervised: true
+  supervised: true
+- anomalies:
+  - *id002
+  base-oscillation:
+    amplitude: 1.0
+    frequency: 1
+    kind: ecg
+    trend: *id003
+    variance: 0.1
+  channels: 1
+  generation-id: 7
+  length: 10000
+  name: ecg-noise-10%
+  semi-supervised: true
+  supervised: true
+- anomalies:
+  - *id002
+  base-oscillation:
+    amplitude: 1.0
+    frequency: 1
+    kind: ecg
+    trend: *id003
+    variance: 0.3
+  channels: 1
+  generation-id: 8
+  length: 10000
+  name: ecg-noise-30%
+  semi-supervised: true
+  supervised: true
+- anomalies:
+  - *id002
+  base-oscillation:
+    amplitude: 1.0
+    frequency: 1
+    kind: ecg
+    trend: *id003
+    variance: 0.5
+  channels: 1
+  generation-id: 9
+  length: 10000
+  name: ecg-noise-50%
+  semi-supervised: true
+  supervised: true
+- anomalies:
+  - kinds: &id004
+    - kind: variance
+      parameters:
+        variance: 0.3
+    length: 100
+    position: beginning
+  base-oscillation:
+    amplitude: 1.0
+    avg-pattern-length: 160
+    frequency: 5.0
+    kind: cylinder_bell_funnel
+    offset: 12.4
+    trend: &id005
+      amplitude: 2
+      kind: polynomial
+      polynomial:
+      - 2
+      - 2
+    variance: 0.05
+    variance-amplitude: 5
+    variance-pattern-length: 0.2
+  channels: 1
+  generation-id: 10
+  length: 10000
+  name: cbf-position-beginning
+  semi-supervised: true
+  supervised: true
+- anomalies:
+  - kinds: *id004
+    length: 100
+    position: middle
+  base-oscillation:
+    amplitude: 1.0
+    avg-pattern-length: 160
+    frequency: 5.0
+    kind: cylinder_bell_funnel
+    offset: 12.4
+    trend: *id005
+    variance: 0.05
+    variance-amplitude: 5
+    variance-pattern-length: 0.2
+  channels: 1
+  generation-id: 11
+  length: 10000
+  name: cbf-position-middle
+  semi-supervised: true
+  supervised: true
+- anomalies:
+  - kinds: *id004
+    length: 100
+    position: end
+  base-oscillation:
+    amplitude: 1.0
+    avg-pattern-length: 160
+    frequency: 5.0
+    kind: cylinder_bell_funnel
+    offset: 12.4
+    trend: *id005
+    variance: 0.05
+    variance-amplitude: 5
+    variance-pattern-length: 0.2
+  channels: 1
+  generation-id: 12
+  length: 10000
+  name: cbf-position-end
+  semi-supervised: true
+  supervised: true
+- anomalies:
+  - kinds: &id006
+    - kind: mean
+      parameters:
+        offset: 1.0
+    length: 100
+    position: beginning
+  base-oscillation:
+    amplitude: 2
+    frequency: 5.0
+    kind: sinus
+    trend: &id007
+      amplitude: 0.5
+      frequency: 0.1
+      kind: sinus
+      variance: 0
+    variance: 0.1
+  channels: 1
+  generation-id: 13
+  length: 10000
+  name: sinus-position-beginning
+  semi-supervised: true
+  supervised: true
+- anomalies:
+  - kinds: *id006
+    length: 100
+    position: middle
+  base-oscillation:
+    amplitude: 2
+    frequency: 5.0
+    kind: sinus
+    trend: *id007
+    variance: 0.1
+  channels: 1
+  generation-id: 14
+  length: 10000
+  name: sinus-position-middle
+  semi-supervised: true
+  supervised: true
+- anomalies:
+  - kinds: *id006
+    length: 100
+    position: end
+  base-oscillation:
+    amplitude: 2
+    frequency: 5.0
+    kind: sinus
+    trend: *id007
+    variance: 0.1
+  channels: 1
+  generation-id: 15
+  length: 10000
+  name: sinus-position-end
+  semi-supervised: true
+  supervised: true
+- anomalies:
+  - kinds: &id008
+    - kind: frequency
+      parameters:
+        frequency_factor: 2.0
+    length: 100
+    position: middle
+  base-oscillation:
+    amplitude: 0.5
+    freq-mod: 0.01
+    frequency: 12.4
+    kind: sinus
+    offset: 1.3
+    variance: 0.05
+  channels: 1
+  generation-id: 16
+  length: 10000
+  name: sinus-same-count-1
+  semi-supervised: true
+  supervised: true
+- anomalies:
+  - kinds: *id008
+    length: 100
+    position: middle
+  - kinds: *id008
+    length: 100
+    position: middle
+  base-oscillation:
+    amplitude: 0.5
+    freq-mod: 0.01
+    frequency: 12.4
+    kind: sinus
+    offset: 1.3
+    variance: 0.05
+  channels: 1
+  generation-id: 17
+  length: 10000
+  name: sinus-same-count-2
+  semi-supervised: true
+  supervised: true
+- anomalies:
+  - kinds: *id008
+    length: 100
+    position: middle
+  - kinds: *id008
+    length: 100
+    position: middle
+  - kinds: *id008
+    length: 100
+    position: end
+  - kinds: *id008
+    length: 100
+    position: end
+  - kinds: *id008
+    length: 100
+    position: end
+  base-oscillation:
+    amplitude: 0.5
+    freq-mod: 0.01
+    frequency: 12.4
+    kind: sinus
+    offset: 1.3
+    variance: 0.05
+  channels: 1
+  generation-id: 18
+  length: 10000
+  name: sinus-same-count-5
+  semi-supervised: true
+  supervised: true
+- anomalies:
+  - kinds: *id008
+    length: 100
+    position: middle
+  - kinds: *id008
+    length: 100
+    position: middle
+  - kinds: *id008
+    length: 100
+    position: middle
+  - kinds: *id008
+    length: 100
+    position: middle
+  - kinds: *id008
+    length: 100
+    position: middle
+  - kinds: *id008
+    length: 100
+    position: end
+  - kinds: *id008
+    length: 100
+    position: end
+  - kinds: *id008
+    length: 100
+    position: end
+  - kinds: *id008
+    length: 100
+    position: end
+  - kinds: *id008
+    length: 100
+    position: end
+  base-oscillation:
+    amplitude: 0.5
+    freq-mod: 0.01
+    frequency: 12.4
+    kind: sinus
+    offset: 1.3
+    variance: 0.05
+  channels: 1
+  generation-id: 19
+  length: 10000
+  name: sinus-same-count-10
+  semi-supervised: true
+  supervised: true
+- anomalies:
+  - kinds: *id008
+    length: 100
+    position: middle
+  base-oscillation: &id010
+    amplitude: 2.5
+    freq-mod: 0.5
+    frequency: 2.3
+    kind: sinus
+    offset: -2.0
+    variance: 0.05
+  channels: 1
+  generation-id: 20
+  length: 10000
+  name: sinus-diff-count-1
+  semi-supervised: true
+  supervised: true
+- anomalies:
+  - kinds: *id008
+    length: 100
+    position: middle
+  - kinds: *id009
+    length: 100
+    position: end
+  base-oscillation: *id010
+  channels: 1
+  generation-id: 21
+  length: 10000
+  name: sinus-diff-count-2
+  semi-supervised: true
+  supervised: true
+- anomalies:
+  - kinds: &id011
+    - kind: pattern-shift
+      parameters:
+        shift_by: 10
+        transition_window: 10
+    length: 100
+    position: beginning
+  - kinds: *id008
+    length: 100
+    position: middle
+  - kinds: *id009
+    length: 100
+    position: end
+  base-oscillation: *id010
+  channels: 1
+  generation-id: 22
+  length: 10000
+  name: sinus-diff-count-3
+  semi-supervised: true
+  supervised: true
+- anomalies:
+  - kinds: *id011
+    length: 100
+    position: beginning
+  - kinds: *id008
+    length: 100
+    position: middle
+  - kinds: *id009
+    length: 100
+    position: end
+  - kinds: &id015
+    - kind: extremum
+      parameters:
+        context_window: 50
+        local: true
+        min: true
+    length: 1
+    position: end
+  base-oscillation: *id010
+  channels: 1
+  generation-id: 23
+  length: 10000
+  name: sinus-diff-count-4
+  semi-supervised: true
+  supervised: true
+- anomalies:
+  - kinds: *id011
+    length: 100
+    position: beginning
+  - kinds: *id008
+    length: 100
+    position: middle
+  - kinds: *id009
+    length: 100
+    position: middle
+  - kinds: &id012
+    - kind: extremum
+      parameters:
+        local: false
+        min: false
+    length: 1
+    position: end
+  - kinds: *id004
+    length: 100
+    position: end
+  base-oscillation: *id010
+  channels: 1
+  generation-id: 24
+  length: 10000
+  name: sinus-diff-count-5
+  semi-supervised: true
+  supervised: true
+- anomalies:
+  - kinds: *id011
+    length: 100
+    position: beginning
+  - kinds: *id006
+    length: 100
+    position: beginning
+  - kinds: *id008
+    length: 100
+    position: middle
+  - kinds: *id009
+    length: 100
+    position: middle
+  - kinds: *id012
+    length: 1
+    position: end
+  - kinds: *id004
+    length: 100
+    position: end
+  base-oscillation: *id010
+  channels: 1
+  generation-id: 25
+  length: 10000
+  name: sinus-diff-count-6
+  semi-supervised: true
+  supervised: true
+- anomalies:
+  - kinds: *id011
+    length: 100
+    position: beginning
+  - kinds: *id006
+    length: 100
+    position: beginning
+  - kinds: *id008
+    length: 100
+    position: middle
+  - kinds: *id009
+    length: 100
+    position: middle
+  - kinds: *id012
+    length: 1
+    position: end
+  - kinds: *id004
+    length: 100
+    position: end
+  - kinds: *id013
+    length: 100
+    position: end
+  base-oscillation: *id010
+  channels: 1
+  generation-id: 26
+  length: 10000
+  name: sinus-diff-count-7
+  semi-supervised: true
+  supervised: true
+- anomalies:
+  - kinds: *id011
+    length: 100
+    position: beginning
+  - kinds: *id006
+    length: 100
+    position: beginning
+  - kinds: *id008
+    length: 100
+    position: middle
+  - kinds: *id009
+    length: 100
+    position: middle
+  - kinds: &id014
+    - kind: amplitude
+      parameters:
+        amplitude_factor: 0.5
+    length: 100
+    position: middle
+  - kinds: *id012
+    length: 1
+    position: end
+  - kinds: *id004
+    length: 100
+    position: end
+  - kinds: *id013
+    length: 100
+    position: end
+  base-oscillation: *id010
+  channels: 1
+  generation-id: 27
+  length: 10000
+  name: sinus-diff-count-8
+  semi-supervised: true
+  supervised: true
+- anomalies:
+  - kinds: *id011
+    length: 100
+    position: beginning
+  - kinds: *id006
+    length: 100
+    position: beginning
+  - kinds: *id008
+    length: 100
+    position: middle
+  - kinds: *id009
+    length: 100
+    position: middle
+  - kinds: *id014
+    length: 100
+    position: middle
+  - kinds: *id012
+    length: 1
+    position: end
+  - kinds: *id004
+    length: 100
+    position: end
+  - kinds: *id013
+    length: 100
+    position: end
+  - kinds: &id019
+    - kind: trend
+      parameters:
+        amplitude: 1.0
+        frequency: 1
+        kind: sinus
+        length: 100
+        variance: 0.0
+    length: 100
+    position: end
+  base-oscillation: *id010
+  channels: 1
+  generation-id: 28
+  length: 10000
+  name: sinus-diff-count-9
+  semi-supervised: true
+  supervised: true
+- anomalies:
+  - kinds: *id004
+    length: 100
+    position: beginning
+  - kinds: *id004
+    length: 100
+    position: middle
+  - kinds: *id004
+    length: 100
+    position: middle
+  - kinds: *id011
+    length: 100
+    position: end
+  - kinds: *id004
+    length: 100
+    position: end
+  - kinds: *id004
+    length: 100
+    position: end
+  base-oscillation: *id010
+  channels: 1
+  generation-id: 29
+  length: 10000
+  name: sinus-combined-diff-1
+  semi-supervised: true
+  supervised: true
+- anomalies:
+  - kinds: *id008
+    length: 100
+    position: beginning
+  - kinds: *id008
+    length: 100
+    position: middle
+  - kinds:
+    - kind: trend
+      parameters:
+        amplitude: 0.25
+        frequency: 0.725
+        kind: sinus
+        length: 200
+        variance: 0.0
+    length: 200
+    position: middle
+  - kinds: *id008
+    length: 100
+    position: middle
+  - kinds: *id008
+    length: 100
+    position: end
+  - kinds: *id008
+    length: 100
+    position: end
+  base-oscillation: &id017
+    amplitude: 0.5
+    freq-mod: 0.01
+    frequency: 12.4
+    kind: sinus
+    offset: 1.3
+    variance: 0.05
+  channels: 1
+  generation-id: 30
+  length: 10000
+  name: sinus-combined-diff-2
+  semi-supervised: true
+  supervised: true
+- anomalies:
+  - kinds: *id015
+    length: 1
+    position: beginning
+  - kinds: *id015
+    length: 1
+    position: middle
+  - kinds:
+    - kind: mean
+      parameters:
+        offset: 0.2
+    length: 100
+    position: middle
+  - kinds: *id015
+    length: 1
+    position: middle
+  - kinds: *id015
+    length: 1
+    position: end
+  - kinds:
+    - kind: extremum
+      parameters:
+        context_window: 50
+        local: true
+        min: false
+    length: 1
+    position: end
+  base-oscillation: &id016
+    amplitude: 1.0
+    frequency: 5.0
+    kind: sinus
+    variance: 0.05
+  channels: 1
+  generation-id: 31
+  length: 10000
+  name: sinus-combined-diff-3
+  semi-supervised: true
+  supervised: true
+- anomalies:
+  - kinds: *id012
+    length: 1
+    position: middle
+  base-oscillation: *id016
+  channels: 1
+  generation-id: 32
+  length: 10000
+  name: sinus-length-1
+  semi-supervised: true
+  supervised: true
+- anomalies:
+  - kinds: *id004
+    length: 10
+    position: middle
+  base-oscillation: *id016
+  channels: 1
+  generation-id: 33
+  length: 10000
+  name: sinus-length-10
+  semi-supervised: true
+  supervised: true
+- anomalies:
+  - kinds: *id004
+    length: 50
+    position: middle
+  base-oscillation: *id016
+  channels: 1
+  generation-id: 34
+  length: 10000
+  name: sinus-length-50
+  semi-supervised: true
+  supervised: true
+- anomalies:
+  - kinds: *id004
+    length: 100
+    position: middle
+  base-oscillation: *id016
+  channels: 1
+  generation-id: 35
+  length: 10000
+  name: sinus-length-100
+  semi-supervised: true
+  supervised: true
+- anomalies:
+  - kinds: *id004
+    length: 500
+    position: middle
+  base-oscillation: *id016
+  channels: 1
+  generation-id: 36
+  length: 10000
+  name: sinus-length-500
+  semi-supervised: true
+  supervised: true
+- anomalies:
+  - kinds: *id004
+    length: 1000
+    position: middle
+  base-oscillation: *id016
+  channels: 1
+  generation-id: 37
+  length: 10000
+  name: sinus-length-1000
+  semi-supervised: true
+  supervised: true
+- anomalies:
+  - kinds: *id004
+    length: 100
+    position: middle
+  base-oscillation:
+    amplitude: 2.5
+    freq-mod: 0.5
+    frequency: 2.3
+    kind: sinus
+    offset: -2.0
+    trend:
+      amplitude: 1.0
+      frequency: 5.0
+      kind: polynomial
+      offset: -2
+      polynomial: &id026
+      - 0.2
+      - 0.2
+      variance: 0.05
+    variance: 0.05
+  channels: 1
+  generation-id: 38
+  length: 10000
+  name: sinus-trend-linear
+  semi-supervised: true
+  supervised: true
+- anomalies:
+  - kinds: *id004
+    length: 100
+    position: middle
+  base-oscillation:
+    amplitude: 2.5
+    freq-mod: 0.5
+    frequency: 2.3
+    kind: sinus
+    offset: -2.0
+    trend:
+      amplitude: 1.0
+      frequency: 5.0
+      kind: polynomial
+      offset: -2
+      polynomial: &id020
+      - 0.2
+      - 0.2
+      - 10
+      variance: 0.05
+    variance: 0.05
+  channels: 1
+  generation-id: 39
+  length: 10000
+  name: sinus-trend-quadratic
+  semi-supervised: true
+  supervised: true
+- anomalies:
+  - kinds: *id004
+    length: 100
+    position: middle
+  base-oscillation:
+    amplitude: 2.5
+    freq-mod: 0.5
+    frequency: 2.3
+    kind: sinus
+    offset: -2.0
+    trend:
+      amplitude: 0.5
+      frequency: 0.1
+      kind: sinus
+      variance: 0.05
+    variance: 0.05
+  channels: 1
+  generation-id: 40
+  length: 10000
+  name: sinus-trend-sinus
+  semi-supervised: true
+  supervised: true
+- anomalies:
+  - kinds: &id021
+    - kind: amplitude
+      parameters:
+        amplitude_factor: 2
+    length: 100
+    position: middle
+  base-oscillation: *id016
+  channels: 1
+  generation-id: 41
+  length: 10000
+  name: sinus-type-amplitude
+  semi-supervised: true
+  supervised: true
+- anomalies:
+  - kinds: *id012
+    length: 1
+    position: middle
+  base-oscillation: *id016
+  channels: 1
+  generation-id: 42
+  length: 10000
+  name: sinus-type-extremum
+  semi-supervised: true
+  supervised: true
+- anomalies:
+  - kinds: *id008
+    length: 100
+    position: middle
+  base-oscillation: *id016
+  channels: 1
+  generation-id: 43
+  length: 10000
+  name: sinus-type-frequency
+  semi-supervised: true
+  supervised: true
+- anomalies:
+  - kinds: *id006
+    length: 100
+    position: middle
+  base-oscillation: *id016
+  channels: 1
+  generation-id: 44
+  length: 10000
+  name: sinus-type-mean
+  semi-supervised: true
+  supervised: true
+- anomalies:
+  - kinds: *id009
+    length: 100
+    position: middle
+  base-oscillation: *id016
+  channels: 1
+  generation-id: 45
+  length: 10000
+  name: sinus-type-pattern
+  semi-supervised: true
+  supervised: true
+- anomalies:
+  - kinds: *id011
+    length: 100
+    position: middle
+  base-oscillation: *id016
+  channels: 1
+  generation-id: 46
+  length: 10000
+  name: sinus-type-pattern-shift
+  semi-supervised: true
+  supervised: true
+- anomalies:
+  - kinds: *id013
+    length: 100
+    position: middle
+  base-oscillation: *id016
+  channels: 1
+  generation-id: 47
+  length: 10000
+  name: sinus-type-platform
+  semi-supervised: true
+  supervised: true
+- anomalies:
+  - kinds: &id023
+    - kind: trend
+      parameters:
+        kind: polynomial
+        length: 100
+        polynomial:
+        - 0.2
+        - 0.2
+    length: 100
+    position: middle
+  base-oscillation: *id016
+  channels: 1
+  generation-id: 48
+  length: 10000
+  name: sinus-type-trend
+  semi-supervised: true
+  supervised: true
+- anomalies:
+  - kinds: *id004
+    length: 100
+    position: middle
+  base-oscillation: *id016
+  channels: 1
+  generation-id: 49
+  length: 10000
+  name: sinus-type-variance
+  semi-supervised: true
+  supervised: true
+- anomalies:
+  - channel: 0
+    exact-position: 5000
+    kinds: *id008
+    length: 100
+  - channel: 1
+    exact-position: 5000
+    kinds: *id008
+    length: 100
+  - channel: 2
+    exact-position: 5000
+    kinds: *id008
+    length: 100
+  base-oscillation: *id017
+  channels: 3
+  generation-id: 50
+  length: 10000
+  name: sinus-channels-all-of-3
+  semi-supervised: true
+  supervised: true
+- anomalies:
+  - channel: 0
+    kinds: *id008
+    length: 100
+    position: middle
+  base-oscillation: *id017
+  channels: 2
+  generation-id: 51
+  length: 10000
+  name: sinus-channels-single-of-2
+  semi-supervised: true
+  supervised: true
+- anomalies:
+  - channel: 0
+    kinds: *id008
+    length: 100
+    position: middle
+  base-oscillation: *id017
+  channels: 5
+  generation-id: 52
+  length: 10000
+  name: sinus-channels-single-of-5
+  semi-supervised: true
+  supervised: true
+- anomalies:
+  - channel: 0
+    kinds: *id008
+    length: 100
+    position: middle
+  base-oscillation: *id017
+  channels: 10
+  generation-id: 53
+  length: 10000
+  name: sinus-channels-single-of-10
+  semi-supervised: true
+  supervised: true
+- anomalies:
+  - channel: 0
+    kinds: *id008
+    length: 100
+    position: middle
+  base-oscillation: *id017
+  channels: 20
+  generation-id: 54
+  length: 10000
+  name: sinus-channels-single-of-20
+  semi-supervised: true
+  supervised: true
+- anomalies:
+  - kinds: *id008
+    length: 100
+    position: middle
+  base-oscillation:
+    amplitude: 1.0
+    frequency: 6.5
+    kind: ecg
+    variance: 0.05
+  channels: 1
+  generation-id: 55
+  length: 10000
+  name: ecg-same-count-1
+  semi-supervised: true
+  supervised: true
+- anomalies:
+  - kinds: *id008
+    length: 100
+    position: middle
+  - kinds: *id008
+    length: 100
+    position: middle
+  base-oscillation:
+    amplitude: 1.0
+    frequency: 6.5
+    kind: ecg
+    variance: 0.05
+  channels: 1
+  generation-id: 56
+  length: 10000
+  name: ecg-same-count-2
+  semi-supervised: true
+  supervised: true
+- anomalies:
+  - kinds: *id008
+    length: 100
+    position: middle
+  - kinds: *id008
+    length: 100
+    position: middle
+  - kinds: *id008
+    length: 100
+    position: end
+  - kinds: *id008
+    length: 100
+    position: end
+  - kinds: *id008
+    length: 100
+    position: end
+  base-oscillation:
+    amplitude: 1.0
+    frequency: 6.5
+    kind: ecg
+    variance: 0.05
+  channels: 1
+  generation-id: 57
+  length: 10000
+  name: ecg-same-count-5
+  semi-supervised: true
+  supervised: true
+- anomalies:
+  - kinds: *id008
+    length: 100
+    position: middle
+  - kinds: *id008
+    length: 100
+    position: middle
+  - kinds: *id008
+    length: 100
+    position: middle
+  - kinds: *id008
+    length: 100
+    position: middle
+  - kinds: *id008
+    length: 100
+    position: middle
+  - kinds: *id008
+    length: 100
+    position: end
+  - kinds: *id008
+    length: 100
+    position: end
+  - kinds: *id008
+    length: 100
+    position: end
+  - kinds: *id008
+    length: 100
+    position: end
+  - kinds: *id008
+    length: 100
+    position: end
+  base-oscillation:
+    amplitude: 1.0
+    frequency: 6.5
+    kind: ecg
+    variance: 0.05
+  channels: 1
+  generation-id: 58
+  length: 10000
+  name: ecg-same-count-10
+  semi-supervised: true
+  supervised: true
+- anomalies:
+  - kinds: *id008
+    length: 100
+    position: middle
+  base-oscillation: &id018
+    amplitude: 1.0
+    frequency: 5.0
+    kind: ecg
+    variance: 0.05
+  channels: 1
+  generation-id: 59
+  length: 10000
+  name: ecg-diff-count-1
+  semi-supervised: true
+  supervised: true
+- anomalies:
+  - kinds: *id008
+    length: 100
+    position: middle
+  - kinds: *id009
+    length: 100
+    position: end
+  base-oscillation: *id018
+  channels: 1
+  generation-id: 60
+  length: 10000
+  name: ecg-diff-count-2
+  semi-supervised: true
+  supervised: true
+- anomalies:
+  - kinds: *id011
+    length: 100
+    position: beginning
+  - kinds: *id008
+    length: 100
+    position: middle
+  - kinds: *id009
+    length: 100
+    position: end
+  base-oscillation: *id018
+  channels: 1
+  generation-id: 61
+  length: 10000
+  name: ecg-diff-count-3
+  semi-supervised: true
+  supervised: true
+- anomalies:
+  - kinds: *id011
+    length: 100
+    position: beginning
+  - kinds: *id008
+    length: 100
+    position: middle
+  - kinds: *id009
+    length: 100
+    position: end
+  - kinds: *id015
+    length: 1
+    position: end
+  base-oscillation: *id018
+  channels: 1
+  generation-id: 62
+  length: 10000
+  name: ecg-diff-count-4
+  semi-supervised: true
+  supervised: true
+- anomalies:
+  - kinds: *id011
+    length: 100
+    position: beginning
+  - kinds: *id008
+    length: 100
+    position: middle
+  - kinds: *id009
+    length: 100
+    position: middle
+  - kinds: *id012
+    length: 1
+    position: end
+  - kinds: *id004
+    length: 100
+    position: end
+  base-oscillation: *id018
+  channels: 1
+  generation-id: 63
+  length: 10000
+  name: ecg-diff-count-5
+  semi-supervised: true
+  supervised: true
+- anomalies:
+  - kinds: *id011
+    length: 100
+    position: beginning
+  - kinds: *id006
+    length: 100
+    position: beginning
+  - kinds: *id008
+    length: 100
+    position: middle
+  - kinds: *id009
+    length: 100
+    position: middle
+  - kinds: *id012
+    length: 1
+    position: end
+  - kinds: *id004
+    length: 100
+    position: end
+  base-oscillation: *id018
+  channels: 1
+  generation-id: 64
+  length: 10000
+  name: ecg-diff-count-6
+  semi-supervised: true
+  supervised: true
+- anomalies:
+  - kinds: *id011
+    length: 100
+    position: beginning
+  - kinds: *id006
+    length: 100
+    position: beginning
+  - kinds: *id008
+    length: 100
+    position: middle
+  - kinds: *id009
+    length: 100
+    position: middle
+  - kinds: *id012
+    length: 1
+    position: end
+  - kinds: *id004
+    length: 100
+    position: end
+  - kinds: *id013
+    length: 100
+    position: end
+  base-oscillation: *id018
+  channels: 1
+  generation-id: 65
+  length: 10000
+  name: ecg-diff-count-7
+  semi-supervised: true
+  supervised: true
+- anomalies:
+  - kinds: *id011
+    length: 100
+    position: beginning
+  - kinds: *id006
+    length: 100
+    position: beginning
+  - kinds: *id008
+    length: 100
+    position: middle
+  - kinds: *id009
+    length: 100
+    position: middle
+  - kinds: *id014
+    length: 100
+    position: middle
+  - kinds: *id012
+    length: 1
+    position: end
+  - kinds: *id004
+    length: 100
+    position: end
+  - kinds: *id013
+    length: 100
+    position: end
+  base-oscillation: *id018
+  channels: 1
+  generation-id: 66
+  length: 10000
+  name: ecg-diff-count-8
+  semi-supervised: true
+  supervised: true
+- anomalies:
+  - kinds: *id011
+    length: 100
+    position: beginning
+  - kinds: *id006
+    length: 100
+    position: beginning
+  - kinds: *id008
+    length: 100
+    position: middle
+  - kinds: *id009
+    length: 100
+    position: middle
+  - kinds: *id014
+    length: 100
+    position: middle
+  - kinds: *id012
+    length: 1
+    position: end
+  - kinds: *id004
+    length: 100
+    position: end
+  - kinds: *id013
+    length: 100
+    position: end
+  - kinds: *id019
+    length: 100
+    position: end
+  base-oscillation: *id018
+  channels: 1
+  generation-id: 67
+  length: 10000
+  name: ecg-diff-count-9
+  semi-supervised: true
+  supervised: true
+- anomalies:
+  - kinds: *id004
+    length: 100
+    position: beginning
+  - kinds: *id004
+    length: 100
+    position: middle
+  - kinds: *id004
+    length: 100
+    position: middle
+  - kinds: *id011
+    length: 100
+    position: end
+  - kinds: *id004
+    length: 100
+    position: end
+  - kinds: *id004
+    length: 100
+    position: end
+  base-oscillation:
+    amplitude: 1.0
+    frequency: 1
+    kind: ecg
+    trend: *id003
+    variance: 0.05
+  channels: 1
+  generation-id: 68
+  length: 10000
+  name: ecg-combined-diff-1
+  semi-supervised: true
+  supervised: true
+- anomalies:
+  - kinds: *id008
+    length: 100
+    position: beginning
+  - kinds: *id008
+    length: 100
+    position: middle
+  - kinds:
+    - kind: trend
+      parameters:
+        amplitude: 0.25
+        frequency: 0.725
+        kind: sinus
+        length: 200
+        variance: 0.0
+    length: 200
+    position: middle
+  - kinds: *id008
+    length: 100
+    position: middle
+  - kinds: *id008
+    length: 100
+    position: end
+  - kinds: *id008
+    length: 100
+    position: end
+  base-oscillation: &id022
+    amplitude: 1.0
+    frequency: 6.5
+    kind: ecg
+    variance: 0.05
+  channels: 1
+  generation-id: 69
+  length: 10000
+  name: ecg-combined-diff-2
+  semi-supervised: true
+  supervised: true
+- anomalies:
+  - kinds: *id015
+    length: 1
+    position: beginning
+  - kinds: *id015
+    length: 1
+    position: middle
+  - kinds:
+    - kind: mean
+      parameters:
+        offset: 0.2
+    length: 100
+    position: middle
+  - kinds: *id015
+    length: 1
+    position: middle
+  - kinds: *id015
+    length: 1
+    position: end
+  - kinds:
+    - kind: extremum
+      parameters:
+        context_window: 50
+        local: true
+        min: false
+    length: 1
+    position: end
+  base-oscillation: *id018
+  channels: 1
+  generation-id: 70
+  length: 10000
+  name: ecg-combined-diff-3
+  semi-supervised: true
+  supervised: true
+- anomalies:
+  - kinds: *id012
+    length: 1
+    position: middle
+  base-oscillation: *id018
+  channels: 1
+  generation-id: 71
+  length: 10000
+  name: ecg-length-1
+  semi-supervised: true
+  supervised: true
+- anomalies:
+  - kinds: *id004
+    length: 10
+    position: middle
+  base-oscillation: *id018
+  channels: 1
+  generation-id: 72
+  length: 10000
+  name: ecg-length-10
+  semi-supervised: true
+  supervised: true
+- anomalies:
+  - kinds: *id004
+    length: 50
+    position: middle
+  base-oscillation: *id018
+  channels: 1
+  generation-id: 73
+  length: 10000
+  name: ecg-length-50
+  semi-supervised: true
+  supervised: true
+- anomalies:
+  - kinds: *id004
+    length: 100
+    position: middle
+  base-oscillation: *id018
+  channels: 1
+  generation-id: 74
+  length: 10000
+  name: ecg-length-100
+  semi-supervised: true
+  supervised: true
+- anomalies:
+  - kinds: *id004
+    length: 500
+    position: middle
+  base-oscillation: *id018
+  channels: 1
+  generation-id: 75
+  length: 10000
+  name: ecg-length-500
+  semi-supervised: true
+  supervised: true
+- anomalies:
+  - kinds: *id004
+    length: 1000
+    position: middle
+  base-oscillation: *id018
+  channels: 1
+  generation-id: 76
+  length: 10000
+  name: ecg-length-1000
+  semi-supervised: true
+  supervised: true
+- anomalies:
+  - kinds: *id004
+    length: 100
+    position: middle
+  base-oscillation:
+    amplitude: 1.0
+    frequency: 5.0
+    kind: ecg
+    trend:
+      amplitude: 1.0
+      frequency: 5.0
+      kind: polynomial
+      offset: -2
+      polynomial:
+      - 2
+      - 2
+      variance: 0.05
+    variance: 0.05
+  channels: 1
+  generation-id: 77
+  length: 10000
+  name: ecg-trend-linear
+  semi-supervised: true
+  supervised: true
+- anomalies:
+  - kinds: *id004
+    length: 100
+    position: middle
+  base-oscillation:
+    amplitude: 1.0
+    frequency: 5.0
+    kind: ecg
+    trend:
+      amplitude: 1.0
+      frequency: 5.0
+      kind: polynomial
+      offset: -2
+      polynomial: *id020
+      variance: 0.05
+    variance: 0.05
+  channels: 1
+  generation-id: 78
+  length: 10000
+  name: ecg-trend-quadratic
+  semi-supervised: true
+  supervised: true
+- anomalies:
+  - kinds: *id004
+    length: 100
+    position: middle
+  base-oscillation:
+    amplitude: 1.0
+    frequency: 5.0
+    kind: ecg
+    trend:
+      amplitude: 0.5
+      frequency: 0.1
+      kind: sinus
+      variance: 0.05
+    variance: 0.05
+  channels: 1
+  generation-id: 79
+  length: 10000
+  name: ecg-trend-sinus
+  semi-supervised: true
+  supervised: true
+- anomalies:
+  - kinds: *id021
+    length: 100
+    position: middle
+  base-oscillation: *id022
+  channels: 1
+  generation-id: 80
+  length: 10000
+  name: ecg-type-amplitude
+  semi-supervised: true
+  supervised: true
+- anomalies:
+  - kinds: *id012
+    length: 1
+    position: middle
+  base-oscillation: *id022
+  channels: 1
+  generation-id: 81
+  length: 10000
+  name: ecg-type-extremum
+  semi-supervised: true
+  supervised: true
+- anomalies:
+  - kinds: *id008
+    length: 100
+    position: middle
+  base-oscillation: *id022
+  channels: 1
+  generation-id: 82
+  length: 10000
+  name: ecg-type-frequency
+  semi-supervised: true
+  supervised: true
+- anomalies:
+  - kinds: *id006
+    length: 100
+    position: middle
+  base-oscillation: *id022
+  channels: 1
+  generation-id: 83
+  length: 10000
+  name: ecg-type-mean
+  semi-supervised: true
+  supervised: true
+- anomalies:
+  - kinds: *id009
+    length: 100
+    position: middle
+  base-oscillation: *id022
+  channels: 1
+  generation-id: 84
+  length: 10000
+  name: ecg-type-pattern
+  semi-supervised: true
+  supervised: true
+- anomalies:
+  - kinds: *id011
+    length: 100
+    position: middle
+  base-oscillation: *id022
+  channels: 1
+  generation-id: 85
+  length: 10000
+  name: ecg-type-pattern-shift
+  semi-supervised: true
+  supervised: true
+- anomalies:
+  - kinds: *id013
+    length: 100
+    position: middle
+  base-oscillation: *id022
+  channels: 1
+  generation-id: 86
+  length: 10000
+  name: ecg-type-platform
+  semi-supervised: true
+  supervised: true
+- anomalies:
+  - kinds: *id023
+    length: 100
+    position: middle
+  base-oscillation: *id022
+  channels: 1
+  generation-id: 87
+  length: 10000
+  name: ecg-type-trend
+  semi-supervised: true
+  supervised: true
+- anomalies:
+  - kinds: *id004
+    length: 100
+    position: middle
+  base-oscillation: *id022
+  channels: 1
+  generation-id: 88
+  length: 10000
+  name: ecg-type-variance
+  semi-supervised: true
+  supervised: true
+- anomalies:
+  - channel: 0
+    exact-position: 5000
+    kinds: *id008
+    length: 100
+  - channel: 1
+    exact-position: 5000
+    kinds: *id008
+    length: 100
+  - channel: 2
+    exact-position: 5000
+    kinds: *id008
+    length: 100
+  base-oscillation: *id018
+  channels: 3
+  generation-id: 89
+  length: 10000
+  name: ecg-channels-all-of-3
+  semi-supervised: true
+  supervised: true
+- anomalies:
+  - channel: 0
+    kinds: *id008
+    length: 100
+    position: middle
+  base-oscillation: *id018
+  channels: 2
+  generation-id: 90
+  length: 10000
+  name: ecg-channels-single-of-2
+  semi-supervised: true
+  supervised: true
+- anomalies:
+  - channel: 0
+    kinds: *id008
+    length: 100
+    position: middle
+  base-oscillation: *id018
+  channels: 5
+  generation-id: 91
+  length: 10000
+  name: ecg-channels-single-of-5
+  semi-supervised: true
+  supervised: true
+- anomalies:
+  - channel: 0
+    kinds: *id008
+    length: 100
+    position: middle
+  base-oscillation: *id018
+  channels: 10
+  generation-id: 92
+  length: 10000
+  name: ecg-channels-single-of-10
+  semi-supervised: true
+  supervised: true
+- anomalies:
+  - channel: 0
+    kinds: *id008
+    length: 100
+    position: middle
+  base-oscillation: *id018
+  channels: 20
+  generation-id: 93
+  length: 10000
+  name: ecg-channels-single-of-20
+  semi-supervised: true
+  supervised: true
+- anomalies:
+  - kinds: *id004
+    length: 100
+    position: middle
+  base-oscillation:
+    amplitude: 1.0
+    avg-pattern-length: 160
+    frequency: 5.0
+    kind: cylinder_bell_funnel
+    offset: 12.4
+    variance: 0.05
+    variance-amplitude: 5
+    variance-pattern-length: 0.2
+  channels: 1
+  generation-id: 94
+  length: 10000
+  name: cbf-same-count-1
+  semi-supervised: true
+  supervised: true
+- anomalies:
+  - kinds: *id004
+    length: 100
+    position: middle
+  - kinds: *id004
+    length: 100
+    position: middle
+  base-oscillation:
+    amplitude: 1.0
+    avg-pattern-length: 160
+    frequency: 5.0
+    kind: cylinder_bell_funnel
+    offset: 12.4
+    variance: 0.05
+    variance-amplitude: 5
+    variance-pattern-length: 0.2
+  channels: 1
+  generation-id: 95
+  length: 10000
+  name: cbf-same-count-2
+  semi-supervised: true
+  supervised: true
+- anomalies:
+  - kinds: *id004
+    length: 100
+    position: middle
+  - kinds: *id004
+    length: 100
+    position: middle
+  - kinds: *id004
+    length: 100
+    position: end
+  - kinds: *id004
+    length: 100
+    position: end
+  - kinds: *id004
+    length: 100
+    position: end
+  base-oscillation:
+    amplitude: 1.0
+    avg-pattern-length: 160
+    frequency: 5.0
+    kind: cylinder_bell_funnel
+    offset: 12.4
+    variance: 0.05
+    variance-amplitude: 5
+    variance-pattern-length: 0.2
+  channels: 1
+  generation-id: 96
+  length: 10000
+  name: cbf-same-count-5
+  semi-supervised: true
+  supervised: true
+- anomalies:
+  - kinds: *id004
+    length: 100
+    position: middle
+  - kinds: *id004
+    length: 100
+    position: middle
+  - kinds: *id004
+    length: 100
+    position: middle
+  - kinds: *id004
+    length: 100
+    position: middle
+  - kinds: *id004
+    length: 100
+    position: middle
+  - kinds: *id004
+    length: 100
+    position: end
+  - kinds: *id004
+    length: 100
+    position: end
+  - kinds: *id004
+    length: 100
+    position: end
+  - kinds: *id004
+    length: 100
+    position: end
+  - kinds: *id004
+    length: 100
+    position: end
+  base-oscillation:
+    amplitude: 1.0
+    avg-pattern-length: 160
+    frequency: 5.0
+    kind: cylinder_bell_funnel
+    offset: 12.4
+    variance: 0.05
+    variance-amplitude: 5
+    variance-pattern-length: 0.2
+  channels: 1
+  generation-id: 97
+  length: 10000
+  name: cbf-same-count-10
+  semi-supervised: true
+  supervised: true
+- anomalies:
+  - kinds: *id009
+    length: 100
+    position: end
+  base-oscillation: &id024
+    amplitude: 1.0
+    avg-pattern-length: 160
+    frequency: 5.0
+    kind: cylinder_bell_funnel
+    offset: 12.4
+    variance: 0.05
+    variance-amplitude: 5
+    variance-pattern-length: 0.2
+  channels: 1
+  generation-id: 98
+  length: 10000
+  name: cbf-diff-count-1
+  semi-supervised: true
+  supervised: true
+- anomalies:
+  - kinds: *id012
+    length: 1
+    position: beginning
+  - kinds: *id009
+    length: 100
+    position: end
+  base-oscillation: *id024
+  channels: 1
+  generation-id: 99
+  length: 10000
+  name: cbf-diff-count-2
+  semi-supervised: true
+  supervised: true
+- anomalies:
+  - kinds: *id012
+    length: 1
+    position: beginning
+  - kinds: *id009
+    length: 100
+    position: middle
+  - kinds: *id004
+    length: 100
+    position: end
+  base-oscillation: *id024
+  channels: 1
+  generation-id: 100
+  length: 10000
+  name: cbf-diff-count-3
+  semi-supervised: true
+  supervised: true
+- anomalies:
+  - kinds: *id012
+    length: 1
+    position: beginning
+  - kinds: *id006
+    length: 100
+    position: beginning
+  - kinds: *id009
+    length: 100
+    position: middle
+  - kinds: *id004
+    length: 100
+    position: end
+  base-oscillation: *id024
+  channels: 1
+  generation-id: 101
+  length: 10000
+  name: cbf-diff-count-4
+  semi-supervised: true
+  supervised: true
+- anomalies:
+  - kinds: *id015
+    length: 1
+    position: beginning
+  - kinds: *id006
+    length: 100
+    position: beginning
+  - kinds: *id009
+    length: 100
+    position: middle
+  - kinds: *id004
+    length: 100
+    position: end
+  - kinds: *id013
+    length: 100
+    position: end
+  base-oscillation: *id024
+  channels: 1
+  generation-id: 102
+  length: 10000
+  name: cbf-diff-count-5
+  semi-supervised: true
+  supervised: true
+- anomalies:
+  - kinds: *id015
+    length: 1
+    position: beginning
+  - kinds: *id006
+    length: 100
+    position: beginning
+  - kinds: *id009
+    length: 100
+    position: middle
+  - kinds: *id014
+    length: 100
+    position: middle
+  - kinds: *id004
+    length: 100
+    position: end
+  - kinds: *id013
+    length: 100
+    position: end
+  base-oscillation: *id024
+  channels: 1
+  generation-id: 103
+  length: 10000
+  name: cbf-diff-count-6
+  semi-supervised: true
+  supervised: true
+- anomalies:
+  - kinds: *id015
+    length: 1
+    position: beginning
+  - kinds: *id006
+    length: 100
+    position: beginning
+  - kinds: *id009
+    length: 100
+    position: middle
+  - kinds: *id014
+    length: 100
+    position: middle
+  - kinds: *id004
+    length: 100
+    position: end
+  - kinds: *id013
+    length: 100
+    position: end
+  - kinds: *id019
+    length: 100
+    position: end
+  base-oscillation: *id024
+  channels: 1
+  generation-id: 104
+  length: 10000
+  name: cbf-diff-count-7
+  semi-supervised: true
+  supervised: true
+- anomalies:
+  - kinds: *id004
+    length: 100
+    position: beginning
+  - kinds: *id004
+    length: 100
+    position: middle
+  - kinds: *id004
+    length: 100
+    position: middle
+  - kinds: *id009
+    length: 100
+    position: end
+  - kinds: *id004
+    length: 100
+    position: end
+  - kinds: *id004
+    length: 100
+    position: end
+  base-oscillation: *id024
+  channels: 1
+  generation-id: 105
+  length: 10000
+  name: cbf-combined-diff-1
+  semi-supervised: true
+  supervised: true
+- anomalies:
+  - kinds: *id013
+    length: 100
+    position: beginning
+  - kinds: *id013
+    length: 100
+    position: middle
+  - kinds:
+    - kind: trend
+      parameters:
+        amplitude: 0.25
+        frequency: 0.725
+        kind: sinus
+        length: 200
+        variance: 0.0
+    length: 200
+    position: middle
+  - kinds: *id013
+    length: 100
+    position: middle
+  - kinds: *id013
+    length: 100
+    position: end
+  - kinds: *id013
+    length: 100
+    position: end
+  base-oscillation: *id024
+  channels: 1
+  generation-id: 106
+  length: 10000
+  name: cbf-combined-diff-2
+  semi-supervised: true
+  supervised: true
+- anomalies:
+  - kinds: *id015
+    length: 1
+    position: beginning
+  - kinds: *id015
+    length: 1
+    position: middle
+  - kinds:
+    - kind: mean
+      parameters:
+        offset: 0.2
+    length: 100
+    position: middle
+  - kinds: *id015
+    length: 1
+    position: middle
+  - kinds: *id015
+    length: 1
+    position: end
+  - kinds:
+    - kind: extremum
+      parameters:
+        context_window: 50
+        local: true
+        min: false
+    length: 1
+    position: end
+  base-oscillation: &id025
+    amplitude: 1.0
+    avg-pattern-length: 100
+    frequency: 5.0
+    kind: cylinder_bell_funnel
+    offset: -3
+    variance: 0.05
+    variance-amplitude: 0.1
+    variance-pattern-length: 0.2
+  channels: 1
+  generation-id: 107
+  length: 10000
+  name: cbf-combined-diff-3
+  semi-supervised: true
+  supervised: true
+- anomalies:
+  - kinds: *id012
+    length: 1
+    position: middle
+  base-oscillation: *id025
+  channels: 1
+  generation-id: 108
+  length: 10000
+  name: cbf-length-1
+  semi-supervised: true
+  supervised: true
+- anomalies:
+  - kinds: *id004
+    length: 10
+    position: middle
+  base-oscillation: *id025
+  channels: 1
+  generation-id: 109
+  length: 10000
+  name: cbf-length-10
+  semi-supervised: true
+  supervised: true
+- anomalies:
+  - kinds: *id004
+    length: 50
+    position: middle
+  base-oscillation: *id025
+  channels: 1
+  generation-id: 110
+  length: 10000
+  name: cbf-length-50
+  semi-supervised: true
+  supervised: true
+- anomalies:
+  - kinds: *id004
+    length: 100
+    position: middle
+  base-oscillation: *id025
+  channels: 1
+  generation-id: 111
+  length: 10000
+  name: cbf-length-100
+  semi-supervised: true
+  supervised: true
+- anomalies:
+  - kinds: *id004
+    length: 500
+    position: middle
+  base-oscillation: *id025
+  channels: 1
+  generation-id: 112
+  length: 10000
+  name: cbf-length-500
+  semi-supervised: true
+  supervised: true
+- anomalies:
+  - kinds: *id004
+    length: 1000
+    position: middle
+  base-oscillation: *id025
+  channels: 1
+  generation-id: 113
+  length: 10000
+  name: cbf-length-1000
+  semi-supervised: true
+  supervised: true
+- anomalies:
+  - kinds: *id004
+    length: 100
+    position: middle
+  base-oscillation:
+    amplitude: 1.0
+    avg-pattern-length: 100
+    frequency: 5.0
+    kind: cylinder_bell_funnel
+    offset: -3
+    trend:
+      amplitude: 1.0
+      frequency: 5.0
+      kind: polynomial
+      offset: -2
+      polynomial: *id026
+      variance: 0.05
+    variance: 0.05
+    variance-amplitude: 0.1
+    variance-pattern-length: 0.2
+  channels: 1
+  generation-id: 114
+  length: 10000
+  name: cbf-trend-linear
+  semi-supervised: true
+  supervised: true
+- anomalies:
+  - kinds: *id004
+    length: 100
+    position: middle
+  base-oscillation:
+    amplitude: 1.0
+    avg-pattern-length: 100
+    frequency: 5.0
+    kind: cylinder_bell_funnel
+    offset: -3
+    trend:
+      amplitude: 1.0
+      frequency: 5.0
+      kind: polynomial
+      offset: -2
+      polynomial: *id020
+      variance: 0.05
+    variance: 0.05
+    variance-amplitude: 0.1
+    variance-pattern-length: 0.2
+  channels: 1
+  generation-id: 115
+  length: 10000
+  name: cbf-trend-quadratic
+  semi-supervised: true
+  supervised: true
+- anomalies:
+  - kinds: *id004
+    length: 100
+    position: middle
+  base-oscillation:
+    amplitude: 1.0
+    avg-pattern-length: 100
+    frequency: 5.0
+    kind: cylinder_bell_funnel
+    offset: -3
+    trend:
+      amplitude: 0.5
+      frequency: 0.1
+      kind: sinus
+      variance: 0.05
+    variance: 0.05
+    variance-amplitude: 0.1
+    variance-pattern-length: 0.2
+  channels: 1
+  generation-id: 116
+  length: 10000
+  name: cbf-trend-sinus
+  semi-supervised: true
+  supervised: true
+- anomalies:
+  - kinds: *id021
+    length: 100
+    position: middle
+  base-oscillation: *id025
+  channels: 1
+  generation-id: 117
+  length: 10000
+  name: cbf-type-amplitude
+  semi-supervised: true
+  supervised: true
+- anomalies:
+  - kinds: *id012
+    length: 1
+    position: middle
+  base-oscillation: *id025
+  channels: 1
+  generation-id: 118
+  length: 10000
+  name: cbf-type-extremum
+  semi-supervised: true
+  supervised: true
+- anomalies:
+  - kinds: *id006
+    length: 100
+    position: middle
+  base-oscillation: *id025
+  channels: 1
+  generation-id: 119
+  length: 10000
+  name: cbf-type-mean
+  semi-supervised: true
+  supervised: true
+- anomalies:
+  - kinds: *id009
+    length: 100
+    position: middle
+  base-oscillation: *id025
+  channels: 1
+  generation-id: 120
+  length: 10000
+  name: cbf-type-pattern
+  semi-supervised: true
+  supervised: true
+- anomalies:
+  - kinds: *id013
+    length: 100
+    position: middle
+  base-oscillation: *id025
+  channels: 1
+  generation-id: 121
+  length: 10000
+  name: cbf-type-platform
+  semi-supervised: true
+  supervised: true
+- anomalies:
+  - kinds: *id023
+    length: 100
+    position: middle
+  base-oscillation: *id025
+  channels: 1
+  generation-id: 122
+  length: 10000
+  name: cbf-type-trend
+  semi-supervised: true
+  supervised: true
+- anomalies:
+  - kinds: *id004
+    length: 100
+    position: middle
+  base-oscillation: *id025
+  channels: 1
+  generation-id: 123
+  length: 10000
+  name: cbf-type-variance
+  semi-supervised: true
+  supervised: true
+- anomalies:
+  - channel: 0
+    exact-position: 5000
+    kinds: *id006
+    length: 100
+  - channel: 1
+    exact-position: 5000
+    kinds: *id006
+    length: 100
+  - channel: 2
+    exact-position: 5000
+    kinds: *id006
+    length: 100
+  base-oscillation: *id024
+  channels: 3
+  generation-id: 124
+  length: 10000
+  name: cbf-channels-all-of-3
+  semi-supervised: true
+  supervised: true
+- anomalies:
+  - channel: 0
+    kinds: *id006
+    length: 100
+    position: middle
+  base-oscillation: *id024
+  channels: 2
+  generation-id: 125
+  length: 10000
+  name: cbf-channels-single-of-2
+  semi-supervised: true
+  supervised: true
+- anomalies:
+  - channel: 0
+    kinds: *id006
+    length: 100
+    position: middle
+  base-oscillation: *id024
+  channels: 5
+  generation-id: 126
+  length: 10000
+  name: cbf-channels-single-of-5
+  semi-supervised: true
+  supervised: true
+- anomalies:
+  - channel: 0
+    kinds: *id006
+    length: 100
+    position: middle
+  base-oscillation: *id024
+  channels: 10
+  generation-id: 127
+  length: 10000
+  name: cbf-channels-single-of-10
+  semi-supervised: true
+  supervised: true
+- anomalies:
+  - channel: 0
+    kinds: *id006
+    length: 100
+    position: middle
+  base-oscillation: *id024
+  channels: 20
+  generation-id: 128
+  length: 10000
+  name: cbf-channels-single-of-20
+  semi-supervised: true
+  supervised: true
+- anomalies:
+  - kinds: *id004
+    length: 100
+    position: middle
+  base-oscillation:
+    amplitude: 2.5
+    frequency: 5.0
+    kind: random_walk
+    offset: -2.0
+    smoothing: 0.1
+    variance: 0.0
+  channels: 1
+  generation-id: 129
+  length: 10000
+  name: rw-same-count-1
+  semi-supervised: true
+  supervised: true
+- anomalies:
+  - kinds: *id004
+    length: 100
+    position: middle
+  - kinds: *id004
+    length: 100
+    position: middle
+  base-oscillation:
+    amplitude: 2.5
+    frequency: 5.0
+    kind: random_walk
+    offset: -2.0
+    smoothing: 0.1
+    variance: 0.0
+  channels: 1
+  generation-id: 130
+  length: 10000
+  name: rw-same-count-2
+  semi-supervised: true
+  supervised: true
+- anomalies:
+  - kinds: *id004
+    length: 100
+    position: middle
+  - kinds: *id004
+    length: 100
+    position: middle
+  - kinds: *id004
+    length: 100
+    position: end
+  - kinds: *id004
+    length: 100
+    position: end
+  - kinds: *id004
+    length: 100
+    position: end
+  base-oscillation:
+    amplitude: 2.5
+    frequency: 5.0
+    kind: random_walk
+    offset: -2.0
+    smoothing: 0.1
+    variance: 0.0
+  channels: 1
+  generation-id: 131
+  length: 10000
+  name: rw-same-count-5
+  semi-supervised: true
+  supervised: true
+- anomalies:
+  - kinds: *id004
+    length: 100
+    position: middle
+  - kinds: *id004
+    length: 100
+    position: middle
+  - kinds: *id004
+    length: 100
+    position: middle
+  - kinds: *id004
+    length: 100
+    position: middle
+  - kinds: *id004
+    length: 100
+    position: middle
+  - kinds: *id004
+    length: 100
+    position: end
+  - kinds: *id004
+    length: 100
+    position: end
+  - kinds: *id004
+    length: 100
+    position: end
+  - kinds: *id004
+    length: 100
+    position: end
+  - kinds: *id004
+    length: 100
+    position: end
+  base-oscillation:
+    amplitude: 2.5
+    frequency: 5.0
+    kind: random_walk
+    offset: -2.0
+    smoothing: 0.1
+    variance: 0.0
+  channels: 1
+  generation-id: 132
+  length: 10000
+  name: rw-same-count-10
+  semi-supervised: true
+  supervised: true
+- anomalies:
+  - kinds: *id012
+    length: 1
+    position: middle
+  base-oscillation: &id027
+    amplitude: 2.5
+    frequency: 5.0
+    kind: random_walk
+    offset: -2.0
+    smoothing: 0.1
+    variance: 0.0
+  channels: 1
+  generation-id: 133
+  length: 10000
+  name: rw-diff-count-1
+  semi-supervised: true
+  supervised: true
+- anomalies:
+  - kinds: *id012
+    length: 1
+    position: middle
+  - kinds: *id004
+    length: 100
+    position: end
+  base-oscillation: *id027
+  channels: 1
+  generation-id: 134
+  length: 10000
+  name: rw-diff-count-2
+  semi-supervised: true
+  supervised: true
+- anomalies:
+  - kinds: *id012
+    length: 1
+    position: beginning
+  - kinds: *id006
+    length: 100
+    position: middle
+  - kinds: *id004
+    length: 100
+    position: end
+  base-oscillation: *id027
+  channels: 1
+  generation-id: 135
+  length: 10000
+  name: rw-diff-count-3
+  semi-supervised: true
+  supervised: true
+- anomalies:
+  - kinds: *id015
+    length: 1
+    position: beginning
+  - kinds: *id006
+    length: 100
+    position: middle
+  - kinds: *id004
+    length: 100
+    position: end
+  - kinds: *id013
+    length: 100
+    position: end
+  base-oscillation: *id027
+  channels: 1
+  generation-id: 136
+  length: 10000
+  name: rw-diff-count-4
+  semi-supervised: true
+  supervised: true
+- anomalies:
+  - kinds: *id015
+    length: 1
+    position: beginning
+  - kinds: *id006
+    length: 100
+    position: middle
+  - kinds: *id014
+    length: 100
+    position: middle
+  - kinds: *id004
+    length: 100
+    position: end
+  - kinds: *id013
+    length: 100
+    position: end
+  base-oscillation: *id027
+  channels: 1
+  generation-id: 137
+  length: 10000
+  name: rw-diff-count-5
+  semi-supervised: true
+  supervised: true
+- anomalies:
+  - kinds: *id015
+    length: 1
+    position: beginning
+  - kinds: *id006
+    length: 100
+    position: beginning
+  - kinds: *id014
+    length: 100
+    position: middle
+  - kinds: *id004
+    length: 100
+    position: middle
+  - kinds: *id013
+    length: 100
+    position: end
+  - kinds: *id019
+    length: 100
+    position: end
+  base-oscillation: *id027
+  channels: 1
+  generation-id: 138
+  length: 10000
+  name: rw-diff-count-6
+  semi-supervised: true
+  supervised: true
+- anomalies:
+  - kinds: *id004
+    length: 100
+    position: beginning
+  - kinds: *id004
+    length: 100
+    position: middle
+  - kinds: *id004
+    length: 100
+    position: middle
+  - kinds: *id014
+    length: 100
+    position: end
+  - kinds: *id004
+    length: 100
+    position: end
+  - kinds: *id004
+    length: 100
+    position: end
+  base-oscillation: *id027
+  channels: 1
+  generation-id: 139
+  length: 10000
+  name: rw-combined-diff-1
+  semi-supervised: true
+  supervised: true
+- anomalies:
+  - kinds: *id013
+    length: 100
+    position: beginning
+  - kinds: *id013
+    length: 100
+    position: middle
+  - kinds:
+    - kind: trend
+      parameters:
+        amplitude: 0.25
+        frequency: 0.725
+        kind: sinus
+        length: 200
+        variance: 0.0
+    length: 200
+    position: middle
+  - kinds: *id013
+    length: 100
+    position: middle
+  - kinds: *id013
+    length: 100
+    position: end
+  - kinds: *id013
+    length: 100
+    position: end
+  base-oscillation: *id027
+  channels: 1
+  generation-id: 140
+  length: 10000
+  name: rw-combined-diff-2
+  semi-supervised: true
+  supervised: true
+- anomalies:
+  - kinds: *id015
+    length: 1
+    position: beginning
+  - kinds: *id015
+    length: 1
+    position: middle
+  - kinds:
+    - kind: mean
+      parameters:
+        offset: 0.2
+    length: 100
+    position: middle
+  - kinds: *id015
+    length: 1
+    position: middle
+  - kinds: *id015
+    length: 1
+    position: end
+  - kinds:
+    - kind: extremum
+      parameters:
+        context_window: 50
+        local: true
+        min: false
+    length: 1
+    position: end
+  base-oscillation: &id028
+    amplitude: 1.0
+    frequency: 5.0
+    kind: random_walk
+    variance: 0.0
+  channels: 1
+  generation-id: 141
+  length: 10000
+  name: rw-combined-diff-3
+  semi-supervised: true
+  supervised: true
+- anomalies:
+  - kinds: *id012
+    length: 1
+    position: middle
+  base-oscillation: *id028
+  channels: 1
+  generation-id: 142
+  length: 10000
+  name: rw-length-1
+  semi-supervised: true
+  supervised: true
+- anomalies:
+  - kinds: *id004
+    length: 10
+    position: middle
+  base-oscillation: *id028
+  channels: 1
+  generation-id: 143
+  length: 10000
+  name: rw-length-10
+  semi-supervised: true
+  supervised: true
+- anomalies:
+  - kinds: *id004
+    length: 50
+    position: middle
+  base-oscillation: *id028
+  channels: 1
+  generation-id: 144
+  length: 10000
+  name: rw-length-50
+  semi-supervised: true
+  supervised: true
+- anomalies:
+  - kinds: *id004
+    length: 100
+    position: middle
+  base-oscillation: *id028
+  channels: 1
+  generation-id: 145
+  length: 10000
+  name: rw-length-100
+  semi-supervised: true
+  supervised: true
+- anomalies:
+  - kinds: *id004
+    length: 500
+    position: middle
+  base-oscillation: *id028
+  channels: 1
+  generation-id: 146
+  length: 10000
+  name: rw-length-500
+  semi-supervised: true
+  supervised: true
+- anomalies:
+  - kinds: *id004
+    length: 1000
+    position: middle
+  base-oscillation: *id028
+  channels: 1
+  generation-id: 147
+  length: 10000
+  name: rw-length-1000
+  semi-supervised: true
+  supervised: true
+- anomalies:
+  - kinds: *id004
+    length: 100
+    position: middle
+  base-oscillation:
+    amplitude: 1.0
+    frequency: 5.0
+    kind: random_walk
+    trend:
+      amplitude: 1.0
+      frequency: 5.0
+      kind: polynomial
+      offset: -2
+      polynomial: *id026
+      variance: 0.05
+    variance: 0.0
+  channels: 1
+  generation-id: 148
+  length: 10000
+  name: rw-trend-linear
+  semi-supervised: true
+  supervised: true
+- anomalies:
+  - kinds: *id004
+    length: 100
+    position: middle
+  base-oscillation:
+    amplitude: 1.0
+    frequency: 5.0
+    kind: random_walk
+    trend:
+      amplitude: 1.0
+      frequency: 5.0
+      kind: polynomial
+      offset: -2
+      polynomial: *id020
+      variance: 0.05
+    variance: 0.0
+  channels: 1
+  generation-id: 149
+  length: 10000
+  name: rw-trend-quadratic
+  semi-supervised: true
+  supervised: true
+- anomalies:
+  - kinds: *id004
+    length: 100
+    position: middle
+  base-oscillation:
+    amplitude: 1.0
+    frequency: 5.0
+    kind: random_walk
+    trend:
+      amplitude: 0.5
+      frequency: 0.1
+      kind: sinus
+      variance: 0.05
+    variance: 0.0
+  channels: 1
+  generation-id: 150
+  length: 10000
+  name: rw-trend-sinus
+  semi-supervised: true
+  supervised: true
+- anomalies:
+  - kinds: *id021
+    length: 100
+    position: middle
+  base-oscillation: *id028
+  channels: 1
+  generation-id: 151
+  length: 10000
+  name: rw-type-amplitude
+  semi-supervised: true
+  supervised: true
+- anomalies:
+  - kinds: *id012
+    length: 1
+    position: middle
+  base-oscillation: *id028
+  channels: 1
+  generation-id: 152
+  length: 10000
+  name: rw-type-extremum
+  semi-supervised: true
+  supervised: true
+- anomalies:
+  - kinds: *id006
+    length: 100
+    position: middle
+  base-oscillation: *id028
+  channels: 1
+  generation-id: 153
+  length: 10000
+  name: rw-type-mean
+  semi-supervised: true
+  supervised: true
+- anomalies:
+  - kinds: *id013
+    length: 100
+    position: middle
+  base-oscillation: *id028
+  channels: 1
+  generation-id: 154
+  length: 10000
+  name: rw-type-platform
+  semi-supervised: true
+  supervised: true
+- anomalies:
+  - kinds: *id023
+    length: 100
+    position: middle
+  base-oscillation: *id028
+  channels: 1
+  generation-id: 155
+  length: 10000
+  name: rw-type-trend
+  semi-supervised: true
+  supervised: true
+- anomalies:
+  - kinds: *id004
+    length: 100
+    position: middle
+  base-oscillation: *id028
+  channels: 1
+  generation-id: 156
+  length: 10000
+  name: rw-type-variance
+  semi-supervised: true
+  supervised: true
+- anomalies:
+  - channel: 0
+    exact-position: 5000
+    kinds: *id006
+    length: 100
+  - channel: 1
+    exact-position: 5000
+    kinds: *id006
+    length: 100
+  - channel: 2
+    exact-position: 5000
+    kinds: *id006
+    length: 100
+  base-oscillation: *id027
+  channels: 3
+  generation-id: 157
+  length: 10000
+  name: rw-channels-all-of-3
+  semi-supervised: true
+  supervised: true
+- anomalies:
+  - channel: 0
+    kinds: *id006
+    length: 100
+    position: middle
+  base-oscillation: *id027
+  channels: 2
+  generation-id: 158
+  length: 10000
+  name: rw-channels-single-of-2
+  semi-supervised: true
+  supervised: true
+- anomalies:
+  - channel: 0
+    kinds: *id006
+    length: 100
+    position: middle
+  base-oscillation: *id027
+  channels: 5
+  generation-id: 159
+  length: 10000
+  name: rw-channels-single-of-5
+  semi-supervised: true
+  supervised: true
+- anomalies:
+  - channel: 0
+    kinds: *id006
+    length: 100
+    position: middle
+  base-oscillation: *id027
+  channels: 10
+  generation-id: 160
+  length: 10000
+  name: rw-channels-single-of-10
+  semi-supervised: true
+  supervised: true
+- anomalies:
+  - channel: 0
+    kinds: *id006
+    length: 100
+    position: middle
+  base-oscillation: *id027
+  channels: 20
+  generation-id: 161
+  length: 10000
+  name: rw-channels-single-of-20
+  semi-supervised: true
+  supervised: true
+- anomalies:
+  - kinds: *id004
+    length: 100
+    position: middle
+  base-oscillation:
+    amplitude: 1.0
+    frequency: 5.0
+    kind: polynomial
+    offset: -2
+    polynomial: &id029
+    - 1
+    - 1
+    - -8
+    - -4
+    - 1
+    variance: 0.05
+  channels: 1
+  generation-id: 162
+  length: 10000
+  name: poly-same-count-1
+  semi-supervised: true
+  supervised: true
+- anomalies:
+  - kinds: *id004
+    length: 100
+    position: middle
+  - kinds: *id004
+    length: 100
+    position: middle
+  base-oscillation:
+    amplitude: 1.0
+    frequency: 5.0
+    kind: polynomial
+    offset: -2
+    polynomial: *id029
+    variance: 0.05
+  channels: 1
+  generation-id: 163
+  length: 10000
+  name: poly-same-count-2
+  semi-supervised: true
+  supervised: true
+- anomalies:
+  - kinds: *id004
+    length: 100
+    position: middle
+  - kinds: *id004
+    length: 100
+    position: middle
+  - kinds: *id004
+    length: 100
+    position: end
+  - kinds: *id004
+    length: 100
+    position: end
+  - kinds: *id004
+    length: 100
+    position: end
+  base-oscillation:
+    amplitude: 1.0
+    frequency: 5.0
+    kind: polynomial
+    offset: -2
+    polynomial: *id029
+    variance: 0.05
+  channels: 1
+  generation-id: 164
+  length: 10000
+  name: poly-same-count-5
+  semi-supervised: true
+  supervised: true
+- anomalies:
+  - kinds: *id004
+    length: 100
+    position: middle
+  - kinds: *id004
+    length: 100
+    position: middle
+  - kinds: *id004
+    length: 100
+    position: middle
+  - kinds: *id004
+    length: 100
+    position: middle
+  - kinds: *id004
+    length: 100
+    position: middle
+  - kinds: *id004
+    length: 100
+    position: end
+  - kinds: *id004
+    length: 100
+    position: end
+  - kinds: *id004
+    length: 100
+    position: end
+  - kinds: *id004
+    length: 100
+    position: end
+  - kinds: *id004
+    length: 100
+    position: end
+  base-oscillation:
+    amplitude: 1.0
+    frequency: 5.0
+    kind: polynomial
+    offset: -2
+    polynomial: *id029
+    variance: 0.05
+  channels: 1
+  generation-id: 165
+  length: 10000
+  name: poly-same-count-10
+  semi-supervised: true
+  supervised: true
+- anomalies:
+  - kinds: *id012
+    length: 1
+    position: middle
+  base-oscillation: &id030
+    amplitude: 1.0
+    frequency: 5.0
+    kind: polynomial
+    offset: -2
+    polynomial: *id029
+    variance: 0.05
+  channels: 1
+  generation-id: 166
+  length: 10000
+  name: poly-diff-count-1
+  semi-supervised: true
+  supervised: true
+- anomalies:
+  - kinds: *id012
+    length: 1
+    position: middle
+  - kinds: *id004
+    length: 100
+    position: end
+  base-oscillation: *id030
+  channels: 1
+  generation-id: 167
+  length: 10000
+  name: poly-diff-count-2
+  semi-supervised: true
+  supervised: true
+- anomalies:
+  - kinds: *id012
+    length: 1
+    position: beginning
+  - kinds: *id006
+    length: 100
+    position: middle
+  - kinds: *id004
+    length: 100
+    position: end
+  base-oscillation: *id030
+  channels: 1
+  generation-id: 168
+  length: 10000
+  name: poly-diff-count-3
+  semi-supervised: true
+  supervised: true
+- anomalies:
+  - kinds: *id015
+    length: 1
+    position: beginning
+  - kinds: *id006
+    length: 100
+    position: middle
+  - kinds: *id004
+    length: 100
+    position: end
+  - kinds: *id013
+    length: 100
+    position: end
+  base-oscillation: *id030
+  channels: 1
+  generation-id: 169
+  length: 10000
+  name: poly-diff-count-4
+  semi-supervised: true
+  supervised: true
+- anomalies:
+  - kinds: *id015
+    length: 1
+    position: beginning
+  - kinds: *id006
+    length: 100
+    position: middle
+  - kinds: *id004
+    length: 100
+    position: middle
+  - kinds: *id013
+    length: 100
+    position: end
+  - kinds: *id019
+    length: 100
+    position: end
+  base-oscillation: *id030
+  channels: 1
+  generation-id: 170
+  length: 10000
+  name: poly-diff-count-5
+  semi-supervised: true
+  supervised: true
+- anomalies:
+  - kinds: *id004
+    length: 100
+    position: beginning
+  - kinds: *id004
+    length: 100
+    position: middle
+  - kinds: *id004
+    length: 100
+    position: middle
+  - kinds: *id006
+    length: 100
+    position: end
+  - kinds: *id004
+    length: 100
+    position: end
+  - kinds: *id004
+    length: 100
+    position: end
+  base-oscillation: *id030
+  channels: 1
+  generation-id: 171
+  length: 10000
+  name: poly-combined-diff-1
+  semi-supervised: true
+  supervised: true
+- anomalies:
+  - kinds: *id013
+    length: 100
+    position: beginning
+  - kinds: *id013
+    length: 100
+    position: middle
+  - kinds:
+    - kind: trend
+      parameters:
+        amplitude: 0.25
+        frequency: 0.725
+        kind: sinus
+        length: 200
+        variance: 0.0
+    length: 200
+    position: middle
+  - kinds: *id013
+    length: 100
+    position: middle
+  - kinds: *id013
+    length: 100
+    position: end
+  - kinds: *id013
+    length: 100
+    position: end
+  base-oscillation: *id030
+  channels: 1
+  generation-id: 172
+  length: 10000
+  name: poly-combined-diff-2
+  semi-supervised: true
+  supervised: true
+- anomalies:
+  - kinds: *id015
+    length: 1
+    position: beginning
+  - kinds: *id015
+    length: 1
+    position: middle
+  - kinds:
+    - kind: mean
+      parameters:
+        offset: 0.2
+    length: 100
+    position: middle
+  - kinds: *id015
+    length: 1
+    position: middle
+  - kinds: *id015
+    length: 1
+    position: end
+  - kinds:
+    - kind: extremum
+      parameters:
+        context_window: 50
+        local: true
+        min: false
+    length: 1
+    position: end
+  base-oscillation: &id031
+    amplitude: 1.0
+    frequency: 5.0
+    kind: polynomial
+    offset: -2
+    polynomial: &id032
+    - -8
+    - 8
+    - 2
+    - -10
+    variance: 0.05
+  channels: 1
+  generation-id: 173
+  length: 10000
+  name: poly-combined-diff-3
+  semi-supervised: true
+  supervised: true
+- anomalies:
+  - kinds: *id012
+    length: 1
+    position: middle
+  base-oscillation: *id031
+  channels: 1
+  generation-id: 174
+  length: 10000
+  name: poly-length-1
+  semi-supervised: true
+  supervised: true
+- anomalies:
+  - kinds: *id004
+    length: 10
+    position: middle
+  base-oscillation: *id031
+  channels: 1
+  generation-id: 175
+  length: 10000
+  name: poly-length-10
+  semi-supervised: true
+  supervised: true
+- anomalies:
+  - kinds: *id004
+    length: 50
+    position: middle
+  base-oscillation: *id031
+  channels: 1
+  generation-id: 176
+  length: 10000
+  name: poly-length-50
+  semi-supervised: true
+  supervised: true
+- anomalies:
+  - kinds: *id004
+    length: 100
+    position: middle
+  base-oscillation: *id031
+  channels: 1
+  generation-id: 177
+  length: 10000
+  name: poly-length-100
+  semi-supervised: true
+  supervised: true
+- anomalies:
+  - kinds: *id004
+    length: 500
+    position: middle
+  base-oscillation: *id031
+  channels: 1
+  generation-id: 178
+  length: 10000
+  name: poly-length-500
+  semi-supervised: true
+  supervised: true
+- anomalies:
+  - kinds: *id004
+    length: 1000
+    position: middle
+  base-oscillation: *id031
+  channels: 1
+  generation-id: 179
+  length: 10000
+  name: poly-length-1000
+  semi-supervised: true
+  supervised: true
+- anomalies:
+  - kinds: *id004
+    length: 100
+    position: middle
+  base-oscillation:
+    amplitude: 1.0
+    frequency: 5.0
+    kind: polynomial
+    offset: -2
+    polynomial: *id032
+    trend:
+      amplitude: 1.0
+      frequency: 5.0
+      kind: polynomial
+      offset: -2
+      polynomial: *id026
+      variance: 0.05
+    variance: 0.05
+  channels: 1
+  generation-id: 180
+  length: 10000
+  name: poly-trend-linear
+  semi-supervised: true
+  supervised: true
+- anomalies:
+  - kinds: *id004
+    length: 100
+    position: middle
+  base-oscillation:
+    amplitude: 1.0
+    frequency: 5.0
+    kind: polynomial
+    offset: -2
+    polynomial: *id032
+    trend:
+      amplitude: 1.0
+      frequency: 5.0
+      kind: polynomial
+      offset: -2
+      polynomial: *id020
+      variance: 0.05
+    variance: 0.05
+  channels: 1
+  generation-id: 181
+  length: 10000
+  name: poly-trend-quadratic
+  semi-supervised: true
+  supervised: true
+- anomalies:
+  - kinds: *id004
+    length: 100
+    position: middle
+  base-oscillation:
+    amplitude: 1.0
+    frequency: 5.0
+    kind: polynomial
+    offset: -2
+    polynomial: *id032
+    trend:
+      amplitude: 0.5
+      frequency: 0.1
+      kind: sinus
+      variance: 0.05
+    variance: 0.05
+  channels: 1
+  generation-id: 182
+  length: 10000
+  name: poly-trend-sinus
+  semi-supervised: true
+  supervised: true
+- anomalies:
+  - kinds: *id012
+    length: 1
+    position: middle
+  base-oscillation: *id031
+  channels: 1
+  generation-id: 183
+  length: 10000
+  name: poly-type-extremum
+  semi-supervised: true
+  supervised: true
+- anomalies:
+  - kinds: *id006
+    length: 100
+    position: middle
+  base-oscillation: *id031
+  channels: 1
+  generation-id: 184
+  length: 10000
+  name: poly-type-mean
+  semi-supervised: true
+  supervised: true
+- anomalies:
+  - kinds: *id013
+    length: 100
+    position: middle
+  base-oscillation: *id031
+  channels: 1
+  generation-id: 185
+  length: 10000
+  name: poly-type-platform
+  semi-supervised: true
+  supervised: true
+- anomalies:
+  - kinds: *id023
+    length: 100
+    position: middle
+  base-oscillation: *id031
+  channels: 1
+  generation-id: 186
+  length: 10000
+  name: poly-type-trend
+  semi-supervised: true
+  supervised: true
+- anomalies:
+  - kinds: *id004
+    length: 100
+    position: middle
+  base-oscillation: *id031
+  channels: 1
+  generation-id: 187
+  length: 10000
+  name: poly-type-variance
+  semi-supervised: true
+  supervised: true
+- anomalies:
+  - channel: 0
+    exact-position: 5000
+    kinds: *id006
+    length: 100
+  - channel: 1
+    exact-position: 5000
+    kinds: *id006
+    length: 100
+  - channel: 2
+    exact-position: 5000
+    kinds: *id006
+    length: 100
+  base-oscillation: *id030
+  channels: 3
+  generation-id: 188
+  length: 10000
+  name: poly-channels-all-of-3
+  semi-supervised: true
+  supervised: true
+- anomalies:
+  - channel: 0
+    kinds: *id006
+    length: 100
+    position: middle
+  base-oscillation: *id030
+  channels: 2
+  generation-id: 189
+  length: 10000
+  name: poly-channels-single-of-2
+  semi-supervised: true
+  supervised: true
+- anomalies:
+  - channel: 0
+    kinds: *id006
+    length: 100
+    position: middle
+  base-oscillation: *id030
+  channels: 5
+  generation-id: 190
+  length: 10000
+  name: poly-channels-single-of-5
+  semi-supervised: true
+  supervised: true
+- anomalies:
+  - channel: 0
+    kinds: *id006
+    length: 100
+    position: middle
+  base-oscillation: *id030
+  channels: 10
+  generation-id: 191
+  length: 10000
+  name: poly-channels-single-of-10
+  semi-supervised: true
+  supervised: true
+- anomalies:
+  - channel: 0
+    kinds: *id006
+    length: 100
+    position: middle
+  base-oscillation: *id030
+  channels: 20
+  generation-id: 192
+  length: 10000
+  name: poly-channels-single-of-20
+  semi-supervised: true
+  supervised: true

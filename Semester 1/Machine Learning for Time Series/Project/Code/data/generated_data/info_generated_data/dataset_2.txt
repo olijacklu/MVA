@@ -1,0 +1,51 @@
+{
+    "name": "dataset_2",
+    "length": 10000,
+    "base-oscillations": [
+        {
+            "kind": "cylinder-bell-funnel"
+        }
+    ],
+    "anomalies": [
+        {
+            "position": "middle",
+            "length": 80,
+            "kinds": [
+                {
+                    "kind": "amplitude",
+                    "amplitude_factor": 4.189703034190534
+                }
+            ]
+        },
+        {
+            "position": "end",
+            "length": 70,
+            "kinds": [
+                {
+                    "kind": "amplitude",
+                    "amplitude_factor": 4.503150785978155
+                }
+            ]
+        },
+        {
+            "position": "beginning",
+            "length": 85,
+            "kinds": [
+                {
+                    "kind": "platform",
+                    "value": 3.433386524356115
+                }
+            ]
+        },
+        {
+            "position": "middle",
+            "length": 85,
+            "kinds": [
+                {
+                    "kind": "amplitude",
+                    "amplitude_factor": 4.386843831949239
+                }
+            ]
+        }
+    ]
+}

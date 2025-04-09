@@ -1,0 +1,4 @@
+Parameter,Value
+heap_size,25
+verbose,0
+random_state,42

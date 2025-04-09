@@ -1,0 +1,33 @@
+[
+  {
+    "anomaly_length": {
+      "max": 100,
+      "median": 100,
+      "min": 100
+    },
+    "contamination": 0.03076923076923077,
+    "dataset_id": [
+      "NormA",
+      "Discords_patient_respiration1"
+    ],
+    "dimensions": 1,
+    "is_train": false,
+    "length": 6500,
+    "means": {
+      "value": 74.52095323076924
+    },
+    "num_anomalies": 2,
+    "periods": {
+      "value": 22
+    },
+    "stationarities": {
+      "value": "stationary"
+    },
+    "stddevs": {
+      "value": 289.47377548788
+    },
+    "trends": {
+      "value": []
+    }
+  }
+]

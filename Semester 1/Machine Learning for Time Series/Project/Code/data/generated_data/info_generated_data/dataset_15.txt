@@ -1,0 +1,21 @@
+{
+    "name": "dataset_15",
+    "length": 10000,
+    "base-oscillations": [
+        {
+            "kind": "cylinder-bell-funnel"
+        }
+    ],
+    "anomalies": [
+        {
+            "position": "end",
+            "length": 95,
+            "kinds": [
+                {
+                    "kind": "platform",
+                    "value": 4.76887681957439
+                }
+            ]
+        }
+    ]
+}

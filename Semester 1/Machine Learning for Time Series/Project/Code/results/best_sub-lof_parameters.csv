@@ -1,0 +1,4 @@
+Parameter,Value
+n_neighbors,100
+leaf_size,10
+random_state,42
