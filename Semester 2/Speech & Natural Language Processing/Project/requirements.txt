@@ -1,0 +1,11 @@
+torch
+torchaudio
+transformers
+bitsandbytes
+peft
+tqdm
+seaborn
+matplotlib
+numpy
+editdistance
+wandb
